@@ -102,35 +102,47 @@
 
     /* 바로가기 이미지 오른쪽 */
     .container>.bottom>.b-right {
-        width: 50%;
-        position: relative;
+      width:43%;
+      height:72%;
+      padding:6% 3%;
+      position:absolute;
+      top:18%;
+      right:3%;
+      box-sizing:border-box;
     }
 
     .container>.bottom>.b-right>.img-box {
         display: flex;
-        position: absolute;
         left: 20%;
+        width:100%;
+        height:25%;
+        align-items:center;
+        justify-content:center;
     }
 
-    .container>.bottom>.b-right>.img-box1 {
-        top: 140px;
-    }
-
-    .container>.bottom>.b-right>.img-box2 {
-        top: 240px;
-    }
-
-    .container>.bottom>.b-right>.img-box3 {
-        top: 340px;
-    }
-
-    .container>.bottom>.b-right>.img-box4 {
-        top: 440px;
-    }
 
     .container>.bottom>.b-right>.img-box img {
         justify-content: center;
     }
+
+
+
+    .container>.bottom>.b-right>.img-box a {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      }
+
+
+      .container>.bottom>.b-right>.img-box a img {
+      margin-bottom:0;
+      font-size:0;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+
 
     /* 바텀 bar */
 
@@ -141,170 +153,7 @@
         margin: 0 auto;
     }
 
-    /* 반응형 */
 
-    @media all and (max-width:916px) {
-
-        .container>.bottom>.b-right>.img-box img {
-            transform: scale(0.8);
-        }
-
-        .container>.bottom>.b-right>.img-box1 {
-            top: 125px;
-        }
-
-        .container>.bottom>.b-right>.img-box2 {
-            top: 225px;
-        }
-
-        .container>.bottom>.b-right>.img-box3 {
-            top: 325px;
-        }
-
-        .container>.bottom>.b-right>.img-box4 {
-            top: 425px;
-        }
-    }
-
-    @media all and (max-width:827px) {
-
-        .container>.bottom>.b-right>.img-box {
-            left: 15%;
-        }
-
-        .container>.bottom>.b-right>.img-box1 {
-            top: 105px;
-        }
-
-        .container>.bottom>.b-right>.img-box2 {
-            top: 205px;
-        }
-
-        .container>.bottom>.b-right>.img-box3 {
-            top: 305px;
-        }
-
-        .container>.bottom>.b-right>.img-box4 {
-            top: 405px;
-        }
-
-    }
-
-    @media all and (max-width:787px) {
-
-        .container>.bottom>.b-right>.img-box {
-            left: 15%;
-        }
-
-
-        .container>.bottom>.b-right>.img-box1 {
-            top: 115px;
-        }
-
-        .container>.bottom>.b-right>.img-box2 {
-            top: 205px;
-        }
-
-        .container>.bottom>.b-right>.img-box3 {
-            top: 285px;
-        }
-
-        .container>.bottom>.b-right>.img-box4 {
-            top: 375px;
-        }
-    }
-
-    @media all and (max-width:680px) {
-        .container>.bottom>.b-right>.img-box img {
-            transform: scale(0.7);
-        }
-
-        .container>.bottom>.b-right>.img-box {
-            left: 10%;
-        }
-
-        .container>.bottom>.b-right>.img-box1 {
-            top: 100px;
-        }
-
-        .container>.bottom>.b-right>.img-box2 {
-            top: 170px;
-        }
-
-        .container>.bottom>.b-right>.img-box3 {
-            top: 240px;
-        }
-
-        .container>.bottom>.b-right>.img-box4 {
-            top: 310px;
-        }
-
-        .container>.bottom .shape {
-            width: 70px;
-            height: 40px;
-        }
-
-        .container>.bottom .arrow {
-            width: 12px;
-            height: 12px;
-        }
-    }
-
-    @media all and (max-width:599px) {
-        .container>.bottom>.b-right>.img-box img {
-            transform: scale(0.6);
-        }
-
-        .container>.bottom>.b-right>.img-box {
-            left: 5%;
-        }
-
-        .container>.bottom>.b-right>.img-box1 {
-            top: 80px;
-        }
-
-        .container>.bottom>.b-right>.img-box2 {
-            top: 145px;
-        }
-
-        .container>.bottom>.b-right>.img-box3 {
-            top: 210px;
-        }
-
-        .container>.bottom>.b-right>.img-box4 {
-            top: 275px;
-        }
-
-    }
-
-    @media all and (max-width:500px) {
-        .container>.bottom>.b-right>.img-box img {
-            transform: scale(0.5);
-        }
-
-        .container>.bottom>.b-right>.img-box {
-            left: -5%;
-        }
-
-        .container>.bottom>.b-right>.img-box1 {
-            top: 60px;
-        }
-
-        .container>.bottom>.b-right>.img-box2 {
-            top: 120px;
-            left: -4%;
-        }
-
-        .container>.bottom>.b-right>.img-box3 {
-            top: 175px;
-            left: -3%;
-        }
-
-        .container>.bottom>.b-right>.img-box4 {
-            top: 235px;
-        }
-
-    }
 </style>
 
 <head>
