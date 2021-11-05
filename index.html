@@ -1,16 +1,316 @@
 <!DOCTYPE html>
 <html lang="ko">
 
+<style>
+    /*  nor  */
+    html,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /*  lib  */
+    :root {
+        --site-width: 900px;
+    }
+
+    .container {
+        max-width: var(--site-width);
+        margin: 0 auto;
+    }
+
+    /*  cus  */
+
+    #wrap {
+        width: 100%;
+    }
+
+
+    /* 탑 이미지 */
+
+    .container .img {
+        max-width: 900px;
+        padding-bottom: 66.6667%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        position: relative;
+        z-index: 9;
+    }
+
+    /* 센터 bar */
+
+    div.center-bar {
+        position: relative;
+        max-width: 900px;
+        height: 15px;
+        background-color: #06143a;
+        margin: 0 auto;
+        z-index: 99;
+    }
+
+    /* 바로가기 이벤트 이미지 */
+
+    .container>.bottom {
+        max-width: 900px;
+        padding-bottom: 66.6667%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    /* 센터바 가운데 원 , 화살표 */
+    .container>.bottom .shape {
+        width: 100px;
+        height: 60px;
+        background-color: #06143a;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container>.bottom .arrow {
+        width: 20px;
+        height: 20px;
+        background-color: #06143a;
+        border: 2px solid gold;
+        position: absolute;
+        top: -0.2%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    /* 바로가기 이미지 왼쪽 */
+    .container>.bottom>.b-left {
+        width: 50%;
+    }
+
+    /* 바로가기 이미지 오른쪽 */
+    .container>.bottom>.b-right {
+        width: 50%;
+        position: relative;
+    }
+
+    .container>.bottom>.b-right>.img-box {
+        display: flex;
+        position: absolute;
+        left: 20%;
+    }
+
+    .container>.bottom>.b-right>.img-box1 {
+        top: 140px;
+    }
+
+    .container>.bottom>.b-right>.img-box2 {
+        top: 240px;
+    }
+
+    .container>.bottom>.b-right>.img-box3 {
+        top: 340px;
+    }
+
+    .container>.bottom>.b-right>.img-box4 {
+        top: 440px;
+    }
+
+    .container>.bottom>.b-right>.img-box img {
+        justify-content: center;
+    }
+
+    /* 바텀 bar */
+
+    div.bottom-bar {
+        max-width: 900px;
+        height: 15px;
+        background-color: #06143a;
+        margin: 0 auto;
+    }
+
+    /* 반응형 */
+
+    @media all and (max-width:916px) {
+
+        .container>.bottom>.b-right>.img-box img {
+            transform: scale(0.8);
+        }
+
+        .container>.bottom>.b-right>.img-box1 {
+            top: 125px;
+        }
+
+        .container>.bottom>.b-right>.img-box2 {
+            top: 225px;
+        }
+
+        .container>.bottom>.b-right>.img-box3 {
+            top: 325px;
+        }
+
+        .container>.bottom>.b-right>.img-box4 {
+            top: 425px;
+        }
+    }
+
+    @media all and (max-width:827px) {
+
+        .container>.bottom>.b-right>.img-box {
+            left: 15%;
+        }
+
+        .container>.bottom>.b-right>.img-box1 {
+            top: 105px;
+        }
+
+        .container>.bottom>.b-right>.img-box2 {
+            top: 205px;
+        }
+
+        .container>.bottom>.b-right>.img-box3 {
+            top: 305px;
+        }
+
+        .container>.bottom>.b-right>.img-box4 {
+            top: 405px;
+        }
+
+    }
+
+    @media all and (max-width:787px) {
+
+        .container>.bottom>.b-right>.img-box {
+            left: 15%;
+        }
+
+
+        .container>.bottom>.b-right>.img-box1 {
+            top: 115px;
+        }
+
+        .container>.bottom>.b-right>.img-box2 {
+            top: 205px;
+        }
+
+        .container>.bottom>.b-right>.img-box3 {
+            top: 285px;
+        }
+
+        .container>.bottom>.b-right>.img-box4 {
+            top: 375px;
+        }
+    }
+
+    @media all and (max-width:680px) {
+        .container>.bottom>.b-right>.img-box img {
+            transform: scale(0.7);
+        }
+
+        .container>.bottom>.b-right>.img-box {
+            left: 10%;
+        }
+
+        .container>.bottom>.b-right>.img-box1 {
+            top: 100px;
+        }
+
+        .container>.bottom>.b-right>.img-box2 {
+            top: 170px;
+        }
+
+        .container>.bottom>.b-right>.img-box3 {
+            top: 240px;
+        }
+
+        .container>.bottom>.b-right>.img-box4 {
+            top: 310px;
+        }
+
+        .container>.bottom .shape {
+            width: 70px;
+            height: 40px;
+        }
+
+        .container>.bottom .arrow {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    @media all and (max-width:599px) {
+        .container>.bottom>.b-right>.img-box img {
+            transform: scale(0.6);
+        }
+
+        .container>.bottom>.b-right>.img-box {
+            left: 5%;
+        }
+
+        .container>.bottom>.b-right>.img-box1 {
+            top: 80px;
+        }
+
+        .container>.bottom>.b-right>.img-box2 {
+            top: 145px;
+        }
+
+        .container>.bottom>.b-right>.img-box3 {
+            top: 210px;
+        }
+
+        .container>.bottom>.b-right>.img-box4 {
+            top: 275px;
+        }
+
+    }
+
+    @media all and (max-width:500px) {
+        .container>.bottom>.b-right>.img-box img {
+            transform: scale(0.5);
+        }
+
+        .container>.bottom>.b-right>.img-box {
+            left: -5%;
+        }
+
+        .container>.bottom>.b-right>.img-box1 {
+            top: 60px;
+        }
+
+        .container>.bottom>.b-right>.img-box2 {
+            top: 120px;
+            left: -4%;
+        }
+
+        .container>.bottom>.b-right>.img-box3 {
+            top: 175px;
+            left: -3%;
+        }
+
+        .container>.bottom>.b-right>.img-box4 {
+            top: 235px;
+        }
+
+    }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="./js/jquery-3.6.0.min.js"></script>
-
-    <script src="./js/common.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-
 
     <title>장터 바로가기 이벤트</title>
 </head>
@@ -21,13 +321,13 @@
 
         <div class="container">
 
-            <div class="img top-img">
-                <img src="./img/top-img.jpg" alt="남도장터 이벤트 top">
-            </div>
+            <div class="img top-img"
+                style="background-image: url(http://simg.payrun.co.kr/shopping/etc/namdo/top-img.jpg);"></div>
 
             <div class="center-bar"></div>
 
-            <div class="bottom" style="background-image: url(./img/bottom-img01.jpg);">
+            <div class="bottom"
+                style="background-image: url(http://simg.payrun.co.kr/shopping/etc/namdo/bottom-img01.jpg);">
 
                 <!-- 바 화살표 -->
                 <div class="shape"></div>
@@ -40,25 +340,25 @@
                     <!-- 담양장터 -->
                     <div class="img-box img-box1">
                         <a href="http://damyangmk.kr/" target="_blank">
-                            <img src="./img/button01.jpg" alt="담양장터">
+                            <img src="http://simg.payrun.co.kr/shopping/etc/namdo/button01.jpg" alt="담양장터">
                         </a>
                     </div>
                     <!-- 신안1004몰 -->
                     <div class="img-box img-box2">
                         <a href="http://shinan1004mall.kr/" target="_blank">
-                            <img src="./img/button02.jpg" alt="신안1004몰">
+                            <img src="http://simg.payrun.co.kr/shopping/etc/namdo/button02.jpg" alt="신안1004몰">
                         </a>
                     </div>
                     <!-- 녹색나눔 -->
                     <div class="img-box img-box3">
                         <a href="http://greenanum00.cafe24.com/" target="_blank">
-                            <img src="./img/button03.jpg" alt="녹색나눔">
+                            <img src="http://simg.payrun.co.kr/shopping/etc/namdo/button03.jpg" alt="녹색나눔">
                         </a>
                     </div>
                     <!-- 기찬들 영암몰 -->
                     <div class="img-box img-box4">
                         <a href="http://gichandle.co.kr/" target="_blank">
-                            <img src="./img/button04.jpg" alt="기찬들 영암몰">
+                            <img src="http://simg.payrun.co.kr/shopping/etc/namdo/button04.jpg" alt="기찬들 영암몰">
                         </a>
                     </div>
                 </div>
